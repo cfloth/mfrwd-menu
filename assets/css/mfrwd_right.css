@@ -1,0 +1,146 @@
+/*
+Standard media query sizes (width): 480, 768, 980, 1200;
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.navigation {
+	position: absolute;
+	right: 0;
+    left: auto;
+	top: 0;
+	bottom: 0;
+	width: 230px;
+    margin: 0;
+    padding: 0;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.page {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	overflow-y: auto;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+    -webkit-transition: left .5s ease;
+    -moz-transition: left .5s ease;
+    -ms-transition: left .5s ease;
+    -o-transition: left .5s ease;
+    transition: left .5s ease;
+    z-index: 3;
+}
+
+.page-open {
+	left: -230px;
+}
+
+.page-shadow {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 14px;
+    background-image: url('../img/shadow-right.png');
+    background-repeat: repeat-y;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.header-action {
+    height: 100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    overflow: hidden;
+}
+.header-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.header-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.header-title {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.btn-menu {
+    display: block;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.btn-menu:hover {
+    cursor: pointer;
+}
+
+.content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+/* 1000px */
+@media only screen and (min-width: 62.5em) {
+    .navigation {
+        right: auto;
+        left: 0;
+    }
+
+    .page {
+        left: 230px;
+        right: 0;
+        width: auto;
+    }
+
+    .page-shadow {
+        top: 0;
+        left: auto;
+        right: 0;
+        bottom: 0;
+        width: 14px;
+        background-image: url('../img/shadow-left.png');
+        background-repeat: repeat-y;
+    }
+
+    .btn-menu {
+        display: none;
+    }
+}
