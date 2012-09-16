@@ -1,4 +1,4 @@
 mfrwd-menu
 ==========
 
-menu for mobile-first responsive web design
+Sample menu for mobile-first responsive web design.
