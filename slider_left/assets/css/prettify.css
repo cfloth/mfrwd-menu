@@ -42,8 +42,6 @@ h1, h2, h3, h4 {
 }
 
 .header {
-    height: 64px;
-	padding: 11px;
     background-color: #bec0b0;
     border-bottom: 1px solid #abac9e;
     background-image: -ms-linear-gradient(top, #cbcdc0, #b4b6a7);
@@ -56,23 +54,17 @@ h1, h2, h3, h4 {
     filter: progid:dximagetransform.microsoft.gradient(startColorstr='#cbcdc0', endColorstr='#b4b6a7', GradientType=0);
     filter: progid:dximagetransform.microsoft.gradient(enabled=false);
 }
-.header-action {
-    padding: 6px;
+.header-cell {
     font-size: 14px;
 }
 .header-left, .header-right {
-    width: 64px;
 }
-.header-title {
-    left: 64px;
-    right: 64px;
+.header-middle {
     font-size: 1.5em;
     font-weight: bold;
     text-align: center;
     color: #85867b;
     text-shadow: 0 1px 0 #d7d9c7;
-    padding: 6px;
-    line-height: 52px;
 }
 
 .btn-menu {
@@ -106,7 +98,5 @@ h1, h2, h3, h4 {
 }
 
 .content {
-    top: 64px;
-    background-color: #f6f6fb;
-    padding: 10px;
+    background-color: #ffffff;
 }

@@ -1,3 +1,4 @@
+var myScroll;
 $(document).ready(function() {
   	$('.btn-menu').click(function() {
   	    if (Modernizr.csstransitions) {
@@ -18,6 +19,10 @@ $(document).ready(function() {
   	});
 
     if (Modernizr.touch) {
+        setTimeout(function () {
+            myScroll = new iScroll('content');
+        }, 100);
+
         //"Hide the address bar in a fullscreen iPhone or Android web app"
         //original Gist by nateps (https://gist.github.com/1172490)
         // Hide the address bar!
@@ -39,8 +44,11 @@ $(document).ready(function() {
             // when already scrolled down. The pageYOffset is of no use, since it always
             // returns 0 while the address bar is displayed.
             window.onscroll = function() {
-                page.style.height = window.innerHeight + 'px'
-                navigation.style.height = window.innerHeight + 'px'
+                page.style.height = window.innerHeight + 'px';
+                navigation.style.height = window.innerHeight + 'px';
+                setTimeout(function () {
+                    myScroll.refresh();
+                }, 0);
             }
         }
         var setupScroll = window.onload = function() {
@@ -55,12 +63,18 @@ $(document).ready(function() {
                 // browser doesn't scroll off the location bar.
                 if (iphone && !fullscreen) height += 60;
                 page.style.height = height + 'px';
-                navigation.style.height = window.innerHeight + 'px'
+                navigation.style.height = window.innerHeight + 'px';
+                setTimeout(function () {
+                    myScroll.refresh();
+                }, 0);
             } else if (android) {
                 // The stock Android browser has a location bar height of 56 pixels, but
                 // this very likely could be broken in other Android browsers.
-                page.style.height = (window.innerHeight + 56) + 'px'
-                navigation.style.height = window.innerHeight + 'px'
+                page.style.height = (window.innerHeight + 56) + 'px';
+                navigation.style.height = window.innerHeight + 'px';
+                setTimeout(function () {
+                    myScroll.refresh();
+                }, 0);
             }
             // Scroll after a timeout, since iOS will scroll to the top of the page
             // after it fires the onload event
